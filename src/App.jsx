@@ -2,28 +2,35 @@ import { useForm } from 'react-hook-form';
 import datos from './datos.json';
 import { useState } from 'react';
 
-
 function App() {
-  
-  const {register, handleSubmit, reset, formState: {errors}} = useForm();
-  
-  const handleSubmitForm = handleSubmit(
-    data => {
-      setContador(contador+1),
-      console.log(data),
-      reset()
-    }
-  );
 
-  const [contador, setContador] = useState(0);
-  
   const [paises] = useState(()=>{
     return [...datos].sort(() => Math.random() - 0.5)
   });
+  
+  const {register, handleSubmit, reset, formState: {errors}} = useForm();
 
-  if (contador >= paises.length){
+  const [contador, setContador] = useState(0);
+
+  const [puntos, setPuntos] = useState(0);
+
+  const handleSubmitForm = handleSubmit(
+    data => {
+      if(data.nombreInput.toLowerCase().trim() === paises[contador].pais.toLowerCase()) setPuntos(puntos + 1)
+
+      setContador(contador+1);
+
+      reset();
+    }
+  );
+
+  
+  if (contador >= 5){
     return(
-      <h1>¡Juego terminado!</h1>
+      <>
+        <h1>¡Juego terminado!</h1>
+        <h3>Puntuación total: {puntos}</h3>
+      </>
     )
   }
 
@@ -31,6 +38,7 @@ function App() {
     
     <>
       <h1>Diversión con banderas</h1>
+      <h3>Ronda {contador+1}</h3>
         <form onSubmit={handleSubmitForm}>
           <img src={paises[contador].url} alt={paises[contador].pais} />
 
@@ -46,16 +54,13 @@ function App() {
                   message: '¡Prueba con un nombre más largo!'
                 }
               })
-              
             }
           />
           <p> {errors.nombreInput?.message} </p>
 
           <button type="submit" >Enviar</button>
         </form>
-
     </>
-    
     
   )
 }
