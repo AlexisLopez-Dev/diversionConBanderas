@@ -22,26 +22,18 @@ Un juego de trivia geográfica contrarreloj (Time Attack) desarrollado para cons
 * **Persistencia de Datos:** Sistema de Ranking que utiliza `localStorage` para guardar las puntuaciones del usuario entre sesiones.
 * **Rondas Aleatorias:** El array de países se mezcla aleatoriamente al iniciar cada partida para asegurar la rejugabilidad.
 
-## 🧠 Aprendizajes Clave (De Vanilla a React)
-
-Este proyecto ha servido como "sandbox" para profundizar en conceptos clave del framework:
-
-1.  **Hooks (`useState` & `useEffect`):** Coordinación del temporizador (`setInterval`) con el ciclo de vida de los componentes para evitar memory leaks y comportamientos inesperados.
-2.  **Comunicación entre componentes:** Paso de props y callbacks para comunicar la `GameZone` (hijo) con la lógica principal de la `App` (padre).
-3.  **Renderizado Condicional:** Alternancia entre la pantalla de juego y la pantalla de Ranking/Game Over basada en el estado del tiempo.
-
 ## 🛠️ Tecnologías
 
 * **React (Vite)**
 * **React Hook Form**
-* **CSS3** 
+* **CSS3**
 * **LocalStorage API**
 
 ## 🚀 Instalación y Uso
 
 1.  Clonar el repositorio:
     ```bash
-    git clone [https://github.com/tu-usuario/diversion-con-banderas.git](https://github.com/tu-usuario/diversion-con-banderas.git)
+    git clone [https://github.com/AlexisLopez-Dev/react-flags-time-attack.git](https://github.com/AlexisLopez-Dev/react-flags-time-attack.git)
     ```
 2.  Instalar dependencias:
     ```bash
