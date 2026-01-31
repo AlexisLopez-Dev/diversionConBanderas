@@ -12,7 +12,7 @@ Un juego de trivia geográfica contrarreloj (Time Attack) desarrollado para cons
 
 | Gameplay (Normal) | Gameplay (Zona Crítica) | Ranking Persistente |
 |:---:|:---:|:---:|
-| ![Gameplay Normal](./screenshots/gameplay.png) | ![Zona Crítica](./screenshots/critical.png) | ![Ranking](./screenshots/ranking.png) |
+| ![Gameplay Normal](./screenshots/gameplay.png) | ![Zona Crítica](./screenshots/critical_v2.png) | ![Ranking](./screenshots/ranking.png) |
 
 ## 🎮 Características
 
