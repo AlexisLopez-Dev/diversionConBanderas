@@ -42,7 +42,7 @@ export const Ranking = ({puntos}) => {
         <h3>Puntuación total: {puntos}</h3>
 
         {guardado ? (
-            <p>¡Record guardado con éxito!</p>
+            <h3>¡Record guardado con éxito!</h3>
         ) : (
             <form onSubmit={handleSubmitForm}>
                 Tu nombre:
