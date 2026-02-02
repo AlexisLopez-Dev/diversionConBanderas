@@ -24,6 +24,7 @@ export const GameZone = ({rondaActual, paisActual, alTerminarTurno}) => {
 
           Nombre del país:
           <input 
+            id="input-respuesta"
             type="text" 
             autoFocus
             {

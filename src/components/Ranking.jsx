@@ -46,7 +46,9 @@ export const Ranking = ({puntos}) => {
         ) : (
             <form onSubmit={handleSubmitForm}>
                 Tu nombre:
-                <input type="text" 
+                <input 
+                    type="text"
+                    id="input-respuesta" 
                     {
                         ...register('nombreUsuario')
                     }
