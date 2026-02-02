@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import './style.css'
 import { useForm } from "react-hook-form";
 
 export const Ranking = ({puntos}) => {
