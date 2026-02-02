@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { GameZone } from './components/GameZone';
 import { Ranking } from './components/Ranking';
 import { Timer } from './components/Timer';
+import './style.css'
 
 function App() {
 
